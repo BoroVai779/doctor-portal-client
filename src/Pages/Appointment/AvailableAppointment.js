@@ -13,17 +13,25 @@ const AvailableAppointment = ({date, setDate}) => {
     },[])
     return (
       <div>
-        <h2 className='text-2xl text-center text-accent'>Available Appointment On :  {format(date, "PP")}.</h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-          {
-            services.map(service => <Services
-            key={service._id}
-            service={service}
-            setTreatment={setTreatment}
-            ></Services>)
-          }
+        <h2 className="text-2xl text-center text-accent">
+          Available Appointment On : {format(date, "PP")}.
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service) => (
+            <Services
+              key={service._id}
+              service={service}
+              setTreatment={setTreatment}
+            ></Services>
+          ))}
         </div>
-        {treatment && <BookingModal treatment={treatment}></BookingModal>}
+        {treatment && (
+          <BookingModal
+            date={date}
+            treatment={treatment}
+            setTreatment={setTreatment}
+          ></BookingModal>
+        )}
       </div>
     );
 };
