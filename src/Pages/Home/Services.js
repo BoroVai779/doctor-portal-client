@@ -14,13 +14,13 @@ const Services = () => {
             img: fluoride
         },
         {
-            _id: 1,
+            _id: 2,
             name:'Cavity Treatment',
             description: '',
             img: cavity
         },
         {
-            _id: 2,
+            _id: 3,
             name:'Whitening Treatment',
             description: '',
             img: whitening
