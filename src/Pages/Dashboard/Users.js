@@ -18,10 +18,10 @@ const Users = () => {
         return <Looding></Looding>
     }
     return (
-        <div>
+        
           
-            <div class="overflow-x-auto">
-  <table class="table w-full">
+  <div class="overflow-x-auto">
+    <table class="table w-full">
    
     <thead>
       <tr>
@@ -46,7 +46,6 @@ const Users = () => {
     </tbody>
   </table>
 </div>
-        </div>
     );
 };
 
